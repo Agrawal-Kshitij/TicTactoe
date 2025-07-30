@@ -54,3 +54,11 @@ body{
 .hide{
     display: none;
 }
+#draw{
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #ffff;
+    border-radius: 1rem;
+    border: 2px solid black;
+
+}

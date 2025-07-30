@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#resetBtn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let count = 0;
 
 let turn0 = true;
 const winPatterns = [
@@ -26,8 +27,12 @@ boxes.forEach((box) => {//ading eventlistner for each box.
             box.innerText = "X";
             turn0 = true;
         }
+        count+=1;
         box.disabled = true; //because each box can only be market once;
         checkWinner();
+        if(count === 9){
+            msgContainer.classList.remove("hide");
+        }
 
     });
 });
